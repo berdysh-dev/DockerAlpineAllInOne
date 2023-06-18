@@ -1,14 +1,10 @@
 PHP = php
 USER = berdyshdev2
-REPO = docker_home_page
+REPO = docker_alpine_all_in_one
 TAG = latest
 NAME = work
-PAT = dckr_pat_pyrsXGQ2MeBUmH78GaD_qh-v9A0
-
-# docker login -u berdyshdev2
 
 UID = berdyshdev2
-PASSWD = 9ME22Zk3_eG6
 
 all: kill rmi build run
 
@@ -38,10 +34,7 @@ sh:
 	@docker exec -it `${PHP} DockerUtil.php -ContainerID ${TAG}` sh
 
 login:
-	docker login -u=berdyshdev2 --password=${PAT}
-
-login2:
-	docker login --username aaa --password bbb
+	docker login -u=${UID}
 
 logout:
 	docker logout

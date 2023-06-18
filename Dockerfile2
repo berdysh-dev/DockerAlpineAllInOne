@@ -1,0 +1,8 @@
+FROM alpine:3.17
+
+MAINTAINER 0.1 http://berdysh.net/
+
+COPY entry2.sh /usr/local/bin/entry.sh
+
+CMD ["sh","/usr/local/bin/entry.sh"]
+
